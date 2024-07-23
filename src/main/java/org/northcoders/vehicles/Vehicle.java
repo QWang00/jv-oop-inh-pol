@@ -3,9 +3,9 @@ package org.northcoders.vehicles;
 
 
 public abstract class Vehicle {
-    private String make;
-    private String model;
-    private int speed;
+    public String make;
+    public String model;
+    public int speed;
     public Engine engine;
 
     public Vehicle(String make, String model){

@@ -3,9 +3,9 @@ package org.northcoders.vehicles;
 
 
 public class Engine {
-    private boolean running;
-    private int horsepower;
-    private String fuelType;
+    public boolean running;
+    public int horsepower;
+    public String fuelType;
     static String[] allFuelType = {"Unleaded", "Leaded", "Diesel"};
 
     public boolean isRunning() {
