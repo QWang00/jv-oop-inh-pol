@@ -3,7 +3,7 @@ package org.northcoders.shapes;
 public class Cone extends Shape3D{
    public double height;
 
-    public Cone(double height, Circle base) {
+    public Cone(Circle base, double height) {
         this.height = height;
         this.base = base;
 
@@ -11,6 +11,6 @@ public class Cone extends Shape3D{
 
     @Override
     public double calculateVolume() {
-        return 0;
+        return base.calculateArea()*height / 3;
     }
 }

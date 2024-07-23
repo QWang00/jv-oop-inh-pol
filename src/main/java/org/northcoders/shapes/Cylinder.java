@@ -3,7 +3,7 @@ package org.northcoders.shapes;
 public class Cylinder extends Shape3D{
     public double height;
 
-    public Cylinder(double height, Circle base) {
+    public Cylinder(Circle base, double height) {
 
         this.height = height;
         this.base = base;
@@ -15,6 +15,6 @@ public class Cylinder extends Shape3D{
 
     @Override
     public double calculateVolume() {
-        return 0;
+        return base.calculateArea() * height;
     }
 }

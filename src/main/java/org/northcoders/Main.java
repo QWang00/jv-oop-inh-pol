@@ -1,13 +1,11 @@
 package org.northcoders;
 
-import org.northcoders.shapes.Circle;
-import org.northcoders.shapes.Rectangle;
-import org.northcoders.shapes.Shape;
-import org.northcoders.shapes.Triangle;
+import org.northcoders.shapes.*;
 import org.northcoders.vehicles.Car;
 import org.northcoders.vehicles.Motorcycle;
 import org.northcoders.vehicles.Vehicle;
 
+import java.util.ArrayList;
 import java.util.List;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -23,6 +21,29 @@ public class Main {
 
         for (Shape shape : shapes) {
             System.out.println(shape.getClass().getSimpleName() + " area = " + shape.calculateArea());
+        }
+
+        List<Shape3D> shapes3d = new ArrayList<>(List.of(new Cube(5)));
+
+        for (Shape shape : shapes) {
+
+            if (shape instanceof Circle circle) {
+                shapes3d.add(new Sphere(circle));
+                shapes3d.add(new Cylinder(circle, 5));
+                shapes3d.add(new Cone(circle, 5));
+            }
+
+            else {
+                shapes3d.add(new Prism(shape, 5));
+                shapes3d.add(new Pyramid(shape, 5));
+            }
+
+        }
+
+        for (Shape3D shape3d : shapes3d) {
+            System.out.println(shape3d.getClass().getSimpleName() + " with " +
+                    shape3d.getBase().getClass().getSimpleName() + " base | Volume = " +
+                    shape3d.calculateVolume());
         }
     }
 }

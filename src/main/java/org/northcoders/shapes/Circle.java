@@ -7,6 +7,9 @@ public class Circle extends Shape{
 
     public int radius;
 
+    public int getRadius() {
+        return radius;
+    }
 
     @Override
     public double calculateArea() {
