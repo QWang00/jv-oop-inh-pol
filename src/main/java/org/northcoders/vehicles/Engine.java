@@ -12,25 +12,6 @@ public class Engine {
         return running;
     }
 
-    public void setRunning(boolean running) {
-        this.running = running;
-    }
-
-    public int getHorsepower() {
-        return horsepower;
-    }
-
-    public void setHorsepower(int horsepower) {
-        this.horsepower = horsepower;
-    }
-
-    public String getFuelType() {
-        return fuelType;
-    }
-
-    public void setFuelType(String fuelType) {
-        this.fuelType = fuelType;
-    }
 
     public Engine(boolean running, int horsepower, int index) {
         this.running = running;
