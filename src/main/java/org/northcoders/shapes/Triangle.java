@@ -1,8 +1,8 @@
 package org.northcoders.shapes;
 
 public class Triangle extends Shape{
-    public int base;
-    public int height;
+    private int base;
+    private int height;
 
     public Triangle(int base, int height) {
         this.base = base;

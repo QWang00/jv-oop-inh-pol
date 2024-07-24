@@ -5,7 +5,7 @@ public class Circle extends Shape{
         this.radius = radius;
     }
 
-    public int radius;
+    private int radius;
 
     public int getRadius() {
         return radius;

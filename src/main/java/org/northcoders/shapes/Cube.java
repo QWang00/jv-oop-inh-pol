@@ -1,11 +1,14 @@
 package org.northcoders.shapes;
 
 public class Cube extends Shape3D{
-    // TODO: here we made a extra field but may need to change
-    public int size;
+    // Here I am not initializing size as it's not Shape3D fields
+    //public int size;
     public Cube(int size) {
-        this.size = size;
-        new Cube(new Rectangle(size, size));
+        //this.size = size;
+        // Here I set base to a new Rectangle
+        // as 'base' is the field of Shape3D
+        //new Cube(new Rectangle(size, size));
+        this.base = new Rectangle(size, size);
     }
     private Cube(Rectangle base){
 
